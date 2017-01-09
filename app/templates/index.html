@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>online petitions - explore the issues</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAaAP8qGgD/KhoA/yoaAP8qGgD/KhoA/yoaAP8qGgD/KhoA/yoaAP8qGgD/KhoA/yoaAP8qGgD/KhoA/yoaAP8qGgD/NBoA/zQaAP80GgD/NBoA/zQaAP80GgD/NBoA/zQaAP80GgD/NBoA/zQaAP80GgD/NBoA/zQaAP80GgD/NBoA/0UaAP9FGgD/RRoA/0UaAP9FGgD/RRoA/0UaAP9FGgD/RRoA/0UaAP9FGgD/RRoA/0UaAP9FGgD/RRoA/0UaAP9RGgD/URoA/1EaAP9RGgD/URoA/1EaAP9RGgD/URoA/1EaAP9RGgD/URoA/1EaAP9RGgD/URoA/1EaAP9RGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP9bGgD/WxoA/1saAP91GgD/dRoA/3UaAP91GgD/dRoA/3UaAP91GgD/dRoA/3UaAP91GgD/dRoA/3UaAP91GgD/dRoA/3UaAP91GgD/gBoA/4AaAP+AGgD/gBoA/4AaAP+AGgD/gBoA/4AaAP+AGgD/gBoA/4AaAP+AGgD/gBoA/4AaAP+AGgD/gBoA/4kaAP+JGgD/iRoA/4kaAP+JGgD/iRoA/4kaAP+JGgD/iRoA/4kaAP+JGgD/iRoA/4kaAP+JGgD/iRoA/4kaAP+OGgD/jhoA/44aAP+OGgD/jhoA/44aAP+OGgD/jhoA/44aAP+OGgD/jhoA/44aAP+OGgD/jhoA/44aAP+OGgD/lxoA/5caAP+XGgD/lxoA/5caAP+XGgD/lxoA/5caAP+XGgD/lxoA/5caAP+XGgD/lxoA/5caAP+XGgD/lxoA/60aAP+tGgD/rRoA/60aAP+tGgD/rRoA/60aAP+tGgD/rRoA/60aAP+tGgD/rRoA/60aAP+tGgD/rRoA/60aAP/JGgD/yRoA/8kaAP/JGgD/yRoA/8kaAP/JGgD/yRoA/8kaAP/JGgD/yRoA/8kaAP/JGgD/yRoA/8kaAP/JGgD/3RoA/90aAP/dGgD/3RoA/90aAP/dGgD/3RoA/90aAP/dGgD/3RoA/90aAP/dGgD/3RoA/90aAP/dGgD/3RoA/+waAP/sGgD/7BoA/+waAP/sGgD/7BoA/+waAP/sGgD/7BoA/+waAP/sGgD/7BoA/+waAP/sGgD/7BoA/+waAP//GgD//xoA//8aAP//GgD//xoA//8aAP//GgD//xoA//8aAP//GgD//xoA//8aAP//GgD//xoA//8aAP////8AAP//AAD//wAA//8AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" rel="icon" type="image/x-icon" />
+</head>
+
+<style>
+.jumbotron { 
+    background-color: #990026; 
+    color: #ffffff;
+}
+.container-fluid {
+    padding: 60px 50px;
+}   
+.bg-grey {
+    background-color: #f6f6f6;
+}
+</style>
+<body>
+
+<div class="jumbotron text-center">
+    <h1>change.org</h1>
+        <p>explore the issues</p> 
+            <form class="form-inline" action='.' method="POST">
+                <input type="text" class="form-control" size="30" placeholder="petition id", name="text">
+                <button type="submit" name="my-form" class="btn btn-danger">view</button>
+             </form>
+
+</div>
+    {% for id in ids %} 
+        <div id="{{id}}"></div>
+    {% endfor %}
+<style>
+
+</style>
+
+<footer class="container-fluid text-center">
+  <p>created by Ting Neo, 2016. <br>
+  <a href="mailto:neo.kaiting@gmail.com" title="Email">Email</a> | <a href="https://neokt.github.io/" title="Blog">Blog</a> | <a href="https://github.com/neokt" title="Github">Github</a> | <a href="https://www.linkedin.com/in/kai-ting-neo" title="Linkedin">Linkedin</a></p> 
+
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+
+    <script type="text/javascript">
+
+        var graphs = {{graphJSON | safe}};
+        var ids = {{ids | safe}};
+        
+        for(var i in graphs) {
+            Plotly.plot(ids[i], // the ID of the div, created above
+                        graphs[i].data,
+                        graphs[i].layout || {});
+        }
+
+    </script>
+</footer>
+
+</html>
